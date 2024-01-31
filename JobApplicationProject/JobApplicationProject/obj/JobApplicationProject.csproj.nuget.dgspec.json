@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ritvik Prakash\\Desktop\\c#stuff\\JobApplicationProject\\JobApplicationProject\\JobApplicationProject.csproj": {}
+    "C:\\Users\\Ritvik Prakash\\Desktop\\c#stuff\\JobApplicationTracker\\JobApplicationProject\\JobApplicationProject\\JobApplicationProject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ritvik Prakash\\Desktop\\c#stuff\\JobApplicationProject\\JobApplicationProject\\JobApplicationProject.csproj": {
+    "C:\\Users\\Ritvik Prakash\\Desktop\\c#stuff\\JobApplicationTracker\\JobApplicationProject\\JobApplicationProject\\JobApplicationProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ritvik Prakash\\Desktop\\c#stuff\\JobApplicationProject\\JobApplicationProject\\JobApplicationProject.csproj",
+        "projectUniqueName": "C:\\Users\\Ritvik Prakash\\Desktop\\c#stuff\\JobApplicationTracker\\JobApplicationProject\\JobApplicationProject\\JobApplicationProject.csproj",
         "projectName": "JobApplicationProject",
-        "projectPath": "C:\\Users\\Ritvik Prakash\\Desktop\\c#stuff\\JobApplicationProject\\JobApplicationProject\\JobApplicationProject.csproj",
+        "projectPath": "C:\\Users\\Ritvik Prakash\\Desktop\\c#stuff\\JobApplicationTracker\\JobApplicationProject\\JobApplicationProject\\JobApplicationProject.csproj",
         "packagesPath": "C:\\Users\\Ritvik Prakash\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ritvik Prakash\\Desktop\\c#stuff\\JobApplicationProject\\JobApplicationProject\\obj\\",
+        "outputPath": "C:\\Users\\Ritvik Prakash\\Desktop\\c#stuff\\JobApplicationTracker\\JobApplicationProject\\JobApplicationProject\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

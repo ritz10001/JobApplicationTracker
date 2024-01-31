@@ -1,0 +1,99 @@
+﻿@page
+@model JobApplicationProject.Pages.Admin.Jobs.IndexModel
+@{
+}
+
+<h2 class="text-center mb-5">List of Jobs</h2>
+
+<div class="row mb-5">
+    <div class="col">
+        <a class="btn btn-primary" href="/Admin/Jobs/Create">New Job</a>
+    </div>
+    <div class="col">
+        <form class="d-flex">
+            <input class="form-control me-2" type="search" name="search" value="@Model.search" placeholder="Search By Job or Company" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    function sortTable(column){
+        let orderBy = "desc";
+        let currentColumn = "@Model.column";
+        let currentOrder = "@Model.orderBy";
+        if (column == currentColumn) {
+            if (currentOrder == "asc") {
+                orderBy = "desc";
+            }
+            else {
+                orderBy = "asc";
+            }
+        }
+
+        window.location.href = "?search=@(Model.search)&column=" + column + "orderBy=" + orderBy;
+
+    }
+</script>
+
+<table class="table">
+    <tr>
+        <th style="cursor: pointer;" onclick="sortTable('JobId')">ID</th>
+        <th style="cursor: pointer;" onclick="sortTable('Company')">Company</th>
+        <th style="cursor: pointer;" onclick="sortTable('JobName')">Name</th>
+        <th style="cursor: pointer;" onclick="sortTable('DateApplied')">Date Applied</th>
+        <th>Description</th>
+        <th>URL</th>
+        <th>Application Status</th>
+        
+    </tr>
+
+    @foreach(var job in Model.Jobs)
+    {
+        
+        <tr>
+            <td>@job.JobId</td>
+
+            <td><img src="/Images/@job.CompanyImage" width="100" /></td>
+            <td>@job.JobName</td>
+            <td>(@job.DateApplied)</td>
+            
+            <td>(@job.JobDescription)</td>
+            <td>(@job.JobURL)</td>
+            
+            <td>(@job.ApplicationStatus)</td>
+            <td style="white-space:nowrap">
+                <a class="btn btn-primary btn-sm" href="/Admin/Jobs/Edit?id=@job.JobId">Edit</a>
+                <a class="btn btn-danger btn-sm" href="/Admin/Jobs/Delete?id=@job.JobId">Delete</a>
+
+            </td>
+
+            @* <td>Hello</td>
+            <td>Hello</td>
+            <td>Hello</td>
+            <td>Hello</td>
+            <td>Hello</td>
+            <td>Hello</td>
+            <td>Hello</td> *@
+            
+
+        </tr>
+    }
+    
+</table>
+
+<nav>
+    <ul class="pagination">
+        @for(int i = 1; i < Model.totalPages; i++)
+        {
+            string active = "";
+            if (i == Model.pageIndex)
+            {
+                active = "active";
+            }
+            <li class="page-item @active" aria-current="page">
+                <a class="page-link" href="?pageIndex=@(i)&search=@(Model.search)&column=@(Model.column)&orderBy=@(Model.orderBy)">@i</a>
+            </li>
+        }
+    </ul>
+</nav>

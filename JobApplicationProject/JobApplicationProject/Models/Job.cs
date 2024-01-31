@@ -17,6 +17,8 @@
 
         public int CompanyId { get; set; }
 
+        public string? CompanyImage { get; set; } = "...";
+
         public Company Company { get; set; }    
 
         public int? ApplicationStatusId { get; set; }

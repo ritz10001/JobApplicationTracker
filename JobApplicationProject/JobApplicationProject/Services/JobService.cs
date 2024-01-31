@@ -30,6 +30,7 @@ namespace swaggertest.Services
             context.Jobs.Add(_Job);
             context.SaveChanges();
 
+
             foreach(var skillid in job.SkillIds)
             {
                 var job_skill = new Job_Skill()
@@ -54,6 +55,7 @@ namespace swaggertest.Services
                 CompanyId = job.CompanyId,
                 ApplicationStatusId = job.ApplicationStatusId,
                 Company = job.Company.CompanyName,
+                CompanyImage = job.Company.CompanyImage,
                 ApplicationStatus = job.ApplicationStatus.StatusName,
                 JobSkills = job.Job_Skills.Select(skill => skill.Skill.SkillName).ToList()
             }).ToList();
@@ -71,6 +73,7 @@ namespace swaggertest.Services
                 JobDescription = job.JobDescription,
                 JobURL = job.JobURL,
                 CompanyId = job.CompanyId,
+                CompanyImage = job.Company.CompanyImage,
                 ApplicationStatusId = job.ApplicationStatusId,
                 Company = job.Company.CompanyName,
                 ApplicationStatus = job.ApplicationStatus.StatusName,

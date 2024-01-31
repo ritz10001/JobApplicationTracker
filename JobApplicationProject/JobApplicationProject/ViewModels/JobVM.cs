@@ -1,4 +1,6 @@
-﻿using JobApplicationProject.Models;
+﻿using JobApplicationProject;
+using JobApplicationProject.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace swaggertest.ViewModels
 {
@@ -15,9 +17,9 @@ namespace swaggertest.ViewModels
 
         public int CompanyId { get; set; }
 
-        public int? ApplicationStatusId { get; set; } 
+        public int? ApplicationStatusId { get; set; }
 
-        public List<int> SkillIds { get; set; }
+        public List<int>? SkillIds { get; set; }
 
     }
 
@@ -40,6 +42,8 @@ namespace swaggertest.ViewModels
         //public List<int> SkillIds { get; set; }
 
         public string Company { get; set; }
+
+        public string CompanyImage { get; set; }
 
         public string ApplicationStatus { get; set; }   
 

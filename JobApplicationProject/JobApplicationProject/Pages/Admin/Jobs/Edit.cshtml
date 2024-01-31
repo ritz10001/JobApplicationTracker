@@ -1,0 +1,108 @@
+﻿@page
+@model JobApplicationProject.Pages.Admin.Jobs.EditModel
+@{
+}
+
+<div class="row">
+    <div class="col-md-8 mx-auto rounded border p-3">
+        <h2 class="text-center mb-5">Edit Job</h2>
+
+        @if (Model.errorMessage.Length > 0)
+        {
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>@Model.errorMessage</strong>
+                <button type="button" class="btn-close" data-bs-dimiss="alert" aria-label="Close"></button>
+            </div>
+        }
+        else if (Model.successMessage.Length > 0)
+        {
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>@Model.successMessage</strong>
+                <button type="button" class="btn-close" data-bs-dimiss="alert" aria-label="Close"></button>
+            </div>
+        }
+        
+
+        <form method="post" enctype="multipart/form-data">
+
+            <div class="row mb-3">
+                <label class="col-sm-4 col-form-label">ID</label>
+                <div class="col-sm-8">
+                    <input readonly class="form-control-plaintext" value="@Model.Job.Id">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-4 col-form-label">Name</label>
+                <div class="col-sm-8">
+                    <input class="form-control" asp-for="JobVM.JobName">
+                    <span asp-validation-for="JobVM.JobName" class="text-danger"></span>
+
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-4 col-form-label">Date Applied</label>
+                <div class="col-sm-8">
+                    <input readonly class="form-control-plaintext" value="@Model.Job.DateApplied">
+                    
+
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-4 col-form-label">Description</label>
+                <div class="col-sm-8">
+                    <input class="form-control" asp-for="JobVM.JobDescription">
+                    <span asp-validation-for="JobVM.JobDescription" class="text-danger"></span>
+
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-4 col-form-label">URL</label>
+                <div class="col-sm-8">
+                    <input class="form-control" asp-for="JobVM.JobURL">
+                    <span asp-validation-for="JobVM.JobURL" class="text-danger"></span>
+
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-4 col-form-label">Company ID</label>
+                <div class="col-sm-8">
+                    <input class="form-control" asp-for="JobVM.CompanyId">
+                    <span asp-validation-for="JobVM.CompanyId" class="text-danger"></span>
+
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-4 col-form-label">Application Status ID</label>
+                <div class="col-sm-8">
+                    <input class="form-control" asp-for="JobVM.ApplicationStatusId">
+                    <span asp-validation-for="JobVM.ApplicationStatusId" class="text-danger"></span>
+
+                </div>
+            </div>
+
+           @*  <div class="row mb-3">
+                <label class="col-sm-4 col-form-label">Skill ID's (Comma Separated List)</label>
+                <div class="col-sm-8">
+                    <input class="form-control" value="@Model.JobVM.SkillIds">
+                    <span asp-validation-for="JobVM.SkillIds" class="text-danger"></span>
+                    <small class="form-text text-muted">Enter skill IDs separated by commas</small>
+                </div>
+            </div> *@
+
+            <div class="row mb-3">
+                <div class="offset-sm-4 col-sm-4 d-grid">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+                <div class="col-sm-4 d-grid">
+                    <a class="btn btn-outline-primary" href="/Admin/Jobs/Index" role="button">Cancel</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

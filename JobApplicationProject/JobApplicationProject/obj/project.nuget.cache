@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "R/t3RaiRFltcgBf86FoOwAvZSFC1GZ1juldzfy4wMnX7sR4yWUokiSmcMrkrjBvHfcBglVBxznwOS4hhCUaSfw==",
+  "dgSpecHash": "KFn1FjVIejnbXKjMNM13qOUlluaiA53e0ejcpLZLSBo1q1KyrqvG7PHlKLcAcnmHJ9wKIW6Dm/r18IMg33Z0XQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ritvik Prakash\\Desktop\\c#stuff\\JobApplicationProject\\JobApplicationProject\\JobApplicationProject.csproj",
+  "projectFilePath": "C:\\Users\\Ritvik Prakash\\Desktop\\c#stuff\\JobApplicationTracker\\JobApplicationProject\\JobApplicationProject\\JobApplicationProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ritvik Prakash\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Ritvik Prakash\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
