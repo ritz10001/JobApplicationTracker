@@ -46,16 +46,6 @@ namespace JobApplicationProject.Pages.Admin.Jobs
             JobVM.CompanyId = job.CompanyId;
             JobVM.ApplicationStatusId = job.ApplicationStatusId;
 
-            //foreach (var skill in JobVM.SkillIds)
-            //{
-            //    var job_skill = new Job_Skill()
-            //    {
-            //        JobId = job.Id,
-            //        SkillId = skill
-            //    };
-            //    context.SaveChanges();
-            //}
-
             Job = job;
         }
 
@@ -87,16 +77,6 @@ namespace JobApplicationProject.Pages.Admin.Jobs
             job.JobURL = JobVM.JobURL;
             job.CompanyId = JobVM.CompanyId;
             job.ApplicationStatusId = JobVM.ApplicationStatusId;
-
-            //foreach (var skill in job.Job_Skills)
-            //{
-            //    var job_skill = new Job_Skill()
-            //    {
-            //        JobId = job.Id,
-            //        SkillId = skill.SkillId
-            //    };
-            //    context.SaveChanges();
-            //}
 
             context.SaveChanges();
 

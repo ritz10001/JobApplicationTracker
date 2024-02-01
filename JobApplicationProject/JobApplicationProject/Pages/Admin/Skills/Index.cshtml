@@ -1,0 +1,49 @@
+﻿@page
+@model JobApplicationProject.Pages.Admin.Skills.IndexModel
+@{
+}
+
+<h2 class="text-center mb-5">List of Skills</h2>
+
+<div class="row mb-5">
+    <div class="col">
+        <a class="btn btn-primary" href="/Admin/Skills/Create">New Skill</a>
+    </div>
+    <div class="col">
+    </div>
+</div>
+
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Jobs</th>
+        
+    </tr>
+
+
+    @foreach (var skill in Model.Skills)
+    {
+
+        <tr>
+            <td>@skill.SkillId</td>
+            <td>@skill.SkillName</td>
+            <td>
+                <ul>
+                    @foreach(var job in skill.SkillJobs)
+                    {
+                        <li>@job</li>
+                    }
+                </ul>
+                    
+            </td>
+            <td style="white-space:nowrap">
+                <a class="btn btn-primary btn-sm" href="/Admin/Skills/Edit?id=@skill.SkillId">Edit</a>
+                <a class="btn btn-danger btn-sm" href="/Admin/Skills/Delete?id=@skill.SkillName">Delete</a>
+
+            </td>
+        </tr>
+    }
+
+
+</table>

@@ -12,8 +12,10 @@ namespace swaggertest.ViewModels
 
     }
 
-    public class SkillWithJobsVM
+    public class SkillViewVM
     {
+        public int SkillId { get; set; }
+
         public string SkillName { get; set; }
 
         public List<string> SkillJobs { get; set; }

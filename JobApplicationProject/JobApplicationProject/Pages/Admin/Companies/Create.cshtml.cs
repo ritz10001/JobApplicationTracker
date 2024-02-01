@@ -1,0 +1,64 @@
+using JobApplicationProject.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using swaggertest.ViewModels;
+
+namespace JobApplicationProject.Pages.Admin.Companies
+{
+    public class CreateModel : PageModel
+    {
+        private readonly IWebHostEnvironment environment;
+        private readonly AppDbContext context;
+
+        [BindProperty]
+        public CompanyVM CompanyVM { get; set; } = new CompanyVM();
+
+        public CreateModel(IWebHostEnvironment environment, AppDbContext context)
+        {
+            this.environment = environment;
+            this.context = context;
+        }
+
+        public void OnGet()
+        {
+        }
+
+
+        public string errorMessage = "";
+        public string successMessage = "";
+
+        public void OnPost()
+        {
+            if (!ModelState.IsValid)
+            {
+                errorMessage = "Please enter the required fields!";
+                return;
+            }
+
+            Company company = new Company()
+            {
+                CompanyName = CompanyVM.CompanyName,
+                CompanyImage = CompanyVM.CompanyImage,
+                ContactInfo = CompanyVM.ContactInfo,
+                Website = CompanyVM.Website,
+            };
+
+            context.Companies.Add(company);
+            context.SaveChanges();
+
+            CompanyVM.CompanyName = "";
+            CompanyVM.CompanyImage = "";
+            CompanyVM.Website = "";
+            CompanyVM.ContactInfo = "";
+            
+
+            ModelState.Clear();
+
+            successMessage = "Company Created Successfully!";
+
+            Response.Redirect("/Admin/Companies/Index");
+
+        }
+        
+    }
+}

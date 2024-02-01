@@ -27,7 +27,7 @@ namespace swaggertest.Controllers
         [HttpGet("get-jobs-by-skill-id/{id}")]
         public IActionResult GetJobFromSkills(int id)
         {
-            var _response = skillService.GetJobFromSkills(id);
+            var _response = skillService.GetSkillsWithJobsByID(id);
             return Ok(_response);
         }
 

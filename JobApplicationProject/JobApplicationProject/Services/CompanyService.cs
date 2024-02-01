@@ -58,9 +58,18 @@ namespace swaggertest.Services
         }
 
 
-        public List<Company> GetAllCompanies()
+        public List<CompanyViewVM> GetAllCompanies()
         {
-            return context.Companies.ToList();
+            var companies = context.Companies.Select(company => new CompanyViewVM
+            {
+                CompanyId = company.Id,
+                CompanyName = company.CompanyName,
+                CompanyImage = company.CompanyImage,
+                Website = company.Website,
+                ContactInfo = company.ContactInfo
+            }).ToList();
+
+            return companies;
         }
 
         public CompanyViewVM GetCompanyByID(int id)

@@ -24,6 +24,9 @@ namespace swaggertest.ViewModels
 
     public class CompanyViewVM
     {
+
+        public int CompanyId { get; set; }
+
         [MaxLength(50)]
         public string CompanyName { get; set; } = string.Empty;
 

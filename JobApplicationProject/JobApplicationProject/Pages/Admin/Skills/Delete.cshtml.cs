@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace JobApplicationProject.Pages.Admin.Jobs
+namespace JobApplicationProject.Pages.Admin.Skills
 {
     public class DeleteModel : PageModel
     {
@@ -13,28 +13,27 @@ namespace JobApplicationProject.Pages.Admin.Jobs
             this.environment = environment;
             this.context = context;
         }
+
         public void OnGet(int? id)
         {
-
-            if(id == null)
+            if (id == null)
             {
-                Response.Redirect("/Admin/Jobs/Index");
+                Response.Redirect("/Admin/Skills/Index");
                 return;
             }
 
-            var job = context.Jobs.Find(id);
+            var skill = context.Skills.Find(id);
 
-            if(job == null)
+            if (skill == null)
             {
-                Response.Redirect("/Admin/Jobs/Index");
+                Response.Redirect("/Admin/Skills/Index");
                 return;
             }
 
-            context.Jobs.Remove(job);
+            context.Skills.Remove(skill);
             context.SaveChanges();
 
-            Response.Redirect("/Admin/Jobs/Index");
-
+            Response.Redirect("/Admin/Skills/Index");
         }
     }
 }

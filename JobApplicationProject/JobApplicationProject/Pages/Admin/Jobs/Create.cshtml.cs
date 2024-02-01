@@ -47,18 +47,21 @@ namespace JobApplicationProject.Pages.Admin.Jobs
 
             context.Jobs.Add(job);
             context.SaveChanges();
-            
 
-            foreach (var skillid in JobVM.SkillIds)
+            if (JobVM.SkillIds != null)
             {
-                var job_skill = new Job_Skill()
+                foreach (var skillid in JobVM.SkillIds)
                 {
-                    JobId = job.Id,
-                    SkillId = skillid
-                };
-                context.Job_Skills.Add(job_skill);
-                context.SaveChanges();
+                    var job_skill = new Job_Skill()
+                    {
+                        JobId = job.Id,
+                        SkillId = skillid
+                    };
+                    context.Job_Skills.Add(job_skill);
+                    context.SaveChanges();
+                }
             }
+            
 
             JobVM.JobName = "";
             JobVM.DateApplied = DateTime.Now;

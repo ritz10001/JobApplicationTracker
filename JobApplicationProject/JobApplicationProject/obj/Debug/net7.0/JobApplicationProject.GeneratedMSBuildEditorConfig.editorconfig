@@ -16,6 +16,22 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Ritvik Prakash\Desktop\c#stuff\JobApplicationTracker\JobApplicationProject\JobApplicationProject
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Ritvik Prakash/Desktop/c\#stuff/JobApplicationTracker/JobApplicationProject/JobApplicationProject/Pages/Admin/Companies/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ29tcGFuaWVzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ritvik Prakash/Desktop/c\#stuff/JobApplicationTracker/JobApplicationProject/JobApplicationProject/Pages/Admin/Companies/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ29tcGFuaWVzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ritvik Prakash/Desktop/c\#stuff/JobApplicationTracker/JobApplicationProject/JobApplicationProject/Pages/Admin/Companies/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ29tcGFuaWVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ritvik Prakash/Desktop/c\#stuff/JobApplicationTracker/JobApplicationProject/JobApplicationProject/Pages/Admin/Companies/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ29tcGFuaWVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Ritvik Prakash/Desktop/c\#stuff/JobApplicationTracker/JobApplicationProject/JobApplicationProject/Pages/Admin/Jobs/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cSm9ic1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -30,6 +46,22 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Ritvik Prakash/Desktop/c\#stuff/JobApplicationTracker/JobApplicationProject/JobApplicationProject/Pages/Admin/Jobs/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cSm9ic1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ritvik Prakash/Desktop/c\#stuff/JobApplicationTracker/JobApplicationProject/JobApplicationProject/Pages/Admin/Skills/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cU2tpbGxzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ritvik Prakash/Desktop/c\#stuff/JobApplicationTracker/JobApplicationProject/JobApplicationProject/Pages/Admin/Skills/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cU2tpbGxzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ritvik Prakash/Desktop/c\#stuff/JobApplicationTracker/JobApplicationProject/JobApplicationProject/Pages/Admin/Skills/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cU2tpbGxzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ritvik Prakash/Desktop/c\#stuff/JobApplicationTracker/JobApplicationProject/JobApplicationProject/Pages/Admin/Skills/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cU2tpbGxzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Ritvik Prakash/Desktop/c\#stuff/JobApplicationTracker/JobApplicationProject/JobApplicationProject/Pages/Error.cshtml]

@@ -1,0 +1,44 @@
+﻿@page
+@model JobApplicationProject.Pages.Admin.Companies.IndexModel
+@{
+}
+
+<h2 class="text-center mb-5">List of Companies</h2>
+
+<div class="row mb-5">
+    <div class="col">
+        <a class="btn btn-primary" href="/Admin/Companies/Create">New Company</a>
+    </div>
+    <div class="col">
+        
+    </div>
+</div>
+
+<table class="table">
+    <tr>
+        <th @* style="cursor: pointer;" onclick="sortTable('JobId') *@">ID</th>
+        <th @* style="cursor: pointer;" onclick="sortTable('Company')" *@>Company</th>
+        <th @* style="cursor: pointer;" onclick="sortTable('JobName')" *@>Name</th>
+        <th @* style="cursor: pointer;" onclick="sortTable('DateApplied')" *@>Website</th>
+        <th>Contact</th>
+
+    </tr>
+
+    @foreach (var company in Model.Companies)
+    {
+
+        <tr>
+            <td>@company.CompanyId</td>
+            <td><img src="/Images/@company.CompanyImage" width="100" /></td>
+            <td>@company.CompanyName</td>
+            <td>@company.Website</td>
+            <td>(@company.ContactInfo)</td>
+            <td style="white-space:nowrap">
+                <a class="btn btn-primary btn-sm" href="/Admin/Companies/Edit?id=@company.CompanyId">Edit</a>
+                <a class="btn btn-danger btn-sm" href="/Admin/Companies/Delete?id=@company.CompanyId">Delete</a>
+
+            </td>
+        </tr>
+    }
+
+</table>
