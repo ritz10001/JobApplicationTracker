@@ -11,19 +11,20 @@ namespace JobApplicationProject.Pages.Admin.Companies
         private readonly IWebHostEnvironment environment;
         private readonly AppDbContext context;
 
-        public EditModel(IWebHostEnvironment environment, AppDbContext context)
-        {
-            this.environment = environment;
-            this.context = context;
-
-        }
-
+        [BindProperty]
         public CompanyVM CompanyVM { get; set; } = new CompanyVM();
 
         public Company Company { get; set; } = new Company();
 
         public string errorMessage = "";
         public string successMessage = "";
+
+        public EditModel(IWebHostEnvironment environment, AppDbContext context)
+        {
+            this.environment = environment;
+            this.context = context;
+
+        }
 
 
         public void OnGet(int? id)
@@ -42,8 +43,8 @@ namespace JobApplicationProject.Pages.Admin.Companies
                 return;
             }
 
+
             CompanyVM.CompanyName = company.CompanyName;
-            CompanyVM.CompanyImage = company.CompanyImage;
             CompanyVM.Website = company.Website;
             CompanyVM.ContactInfo = company.ContactInfo;
 
@@ -72,10 +73,27 @@ namespace JobApplicationProject.Pages.Admin.Companies
 
             }
 
+            string newImageFile = company.CompanyImage;
+            if (CompanyVM.CompanyImage != null)
+            {
+                newImageFile = DateTime.Now.ToString("yyyyMMddHHmmssfff");
+                newImageFile += Path.GetExtension(CompanyVM.CompanyImage.FileName);
+
+                string fullPath = environment.WebRootPath + "/Images/" + newImageFile;
+
+                using (var stream = System.IO.File.Create(fullPath))
+                {
+                    CompanyVM.CompanyImage.CopyTo(stream);
+                }
+
+                string oldImagePath = environment.WebRootPath + "/Images/" + company.CompanyImage;
+                System.IO.File.Delete(oldImagePath);
+            }
+
             company.CompanyName = CompanyVM.CompanyName;
-            company.CompanyImage = CompanyVM.CompanyImage;
+            company.CompanyImage = newImageFile;
             company.Website = CompanyVM.Website;    
-            company.ContactInfo = company.ContactInfo;
+            company.ContactInfo = CompanyVM.ContactInfo;
 
             context.SaveChanges();
 

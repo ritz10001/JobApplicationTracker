@@ -55,7 +55,7 @@ namespace swaggertest.Services
                 CompanyId = job.CompanyId,
                 ApplicationStatusId = job.ApplicationStatusId,
                 Company = job.Company.CompanyName,
-                CompanyImage = job.Company.CompanyImage,
+                CompanyImage = job.Company.CompanyImage!,
                 ApplicationStatus = job.ApplicationStatus.StatusName,
                 JobSkills = job.Job_Skills.Select(skill => skill.Skill.SkillName).ToList()
             }).ToList();
@@ -73,7 +73,7 @@ namespace swaggertest.Services
                 JobDescription = job.JobDescription,
                 JobURL = job.JobURL,
                 CompanyId = job.CompanyId,
-                CompanyImage = job.Company.CompanyImage,
+                CompanyImage = job.Company.CompanyImage!,
                 ApplicationStatusId = job.ApplicationStatusId,
                 Company = job.Company.CompanyName,
                 ApplicationStatus = job.ApplicationStatus.StatusName,

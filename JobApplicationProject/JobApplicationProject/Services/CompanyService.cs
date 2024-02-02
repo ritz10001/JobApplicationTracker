@@ -21,7 +21,7 @@ namespace swaggertest.Services
             var _company = new Company()
             {
                 CompanyName = company.CompanyName,
-                CompanyImage = company.CompanyImage,
+                //CompanyImage = company.CompanyImage,
                 Website = company.Website,
                 ContactInfo = company.ContactInfo
             };
@@ -47,7 +47,7 @@ namespace swaggertest.Services
             if(_company != null)
             {
                 _company.CompanyName = company.CompanyName;
-                _company.CompanyImage = company.CompanyImage;
+                //_company.CompanyImage = company.CompanyImage;
                 _company.Website = company.Website;
                 _company.ContactInfo = company.ContactInfo;
             }

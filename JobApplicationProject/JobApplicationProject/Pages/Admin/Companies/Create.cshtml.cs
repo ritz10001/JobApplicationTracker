@@ -35,10 +35,19 @@ namespace JobApplicationProject.Pages.Admin.Companies
                 return;
             }
 
+            string newImageFile = DateTime.Now.ToString("yyyyMMddHHmmssfff");
+            newImageFile += Path.GetExtension(CompanyVM.CompanyImage!.FileName);
+
+            string fullPath = environment.WebRootPath + "/Images/" + newImageFile;
+            using(var stream = System.IO.File.Create(fullPath))
+            {
+                CompanyVM.CompanyImage.CopyTo(stream);
+            }
+
             Company company = new Company()
             {
                 CompanyName = CompanyVM.CompanyName,
-                CompanyImage = CompanyVM.CompanyImage,
+                CompanyImage = newImageFile,
                 ContactInfo = CompanyVM.ContactInfo,
                 Website = CompanyVM.Website,
             };
@@ -47,7 +56,7 @@ namespace JobApplicationProject.Pages.Admin.Companies
             context.SaveChanges();
 
             CompanyVM.CompanyName = "";
-            CompanyVM.CompanyImage = "";
+            CompanyVM.CompanyImage = null;
             CompanyVM.Website = "";
             CompanyVM.ContactInfo = "";
             

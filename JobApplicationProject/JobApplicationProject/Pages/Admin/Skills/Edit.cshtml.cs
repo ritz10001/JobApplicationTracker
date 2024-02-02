@@ -16,7 +16,7 @@ namespace JobApplicationProject.Pages.Admin.Skills
             this.context = context;
 
         }
-
+        [BindProperty]
         public SkillVM SkillVM { get; set; } = new SkillVM();
 
         public Skill Skill { get; set; } = new Skill();
@@ -78,7 +78,7 @@ namespace JobApplicationProject.Pages.Admin.Skills
             Skill = skill;
             successMessage = "Skill Updated Successfully";
 
-            Response.Redirect("/Admin/Skill/Index");
+            Response.Redirect("/Admin/Skills/Index");
 
         }
     }

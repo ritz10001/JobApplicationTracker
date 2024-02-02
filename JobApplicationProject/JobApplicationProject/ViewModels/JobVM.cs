@@ -1,6 +1,7 @@
 ﻿using JobApplicationProject;
 using JobApplicationProject.Models;
 using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace swaggertest.ViewModels
 {
@@ -43,6 +44,7 @@ namespace swaggertest.ViewModels
 
         public string Company { get; set; }
 
+        [NotMapped]
         public string CompanyImage { get; set; }
 
         public string ApplicationStatus { get; set; }   
